@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/aviaTickets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:text="AviaTickets"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aviaTickets"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="From" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/from"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:entries="@array/cities" />
+
+        <TextView
+            android:id="@+id/when1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="When" />
+
+        <DatePicker
+            android:id="@+id/date1"
+            style="@style/MaterialAlertDialog.MaterialComponents.Picker.Date.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/when1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:calendarViewShown="false"
+            android:ems="10"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="To" />
+
+        <Spinner
+            android:id="@+id/spinner6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/to"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:entries="@array/cities" />
+
+        <TextView
+            android:id="@+id/when"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner6"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="When" />
+
+        <DatePicker
+            android:id="@+id/date2"
+            style="@style/MaterialAlertDialog.MaterialComponents.Picker.Date.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/when"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:calendarViewShown="false"
+            android:ems="10"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/adults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date2"
+            android:layout_alignBaseline="@id/quantity_a"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Adults" />
+
+        <EditText
+            android:id="@+id/quantity_a"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/adults"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="1"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/children"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_a"
+            android:layout_alignBaseline="@id/quantity_c"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Children" />
+
+        <EditText
+            android:id="@+id/quantity_c"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_a"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/children"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="1"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/infants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_c"
+            android:layout_alignBaseline="@id/quantity_i"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Infants" />
+
+        <EditText
+            android:id="@+id/quantity_i"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_c"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/infants"
+            android:ems="10"
+            android:gravity="right"
+            android:hint="1"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_i"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="Button" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
